@@ -24,7 +24,7 @@ transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
-trainset = torchvision.datasets.STL10(root='./data', split='train', download=True, transform=transform)
+trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=32, shuffle=True)
 
 model = torchvision.models.resnet101(pretrained=True)
