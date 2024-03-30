@@ -42,7 +42,7 @@ for optimizer in optimizers:
     train_accuracy_history = []
 
     optimizer_name = optimizer.__class__.__name__
-    print(f"Training with {optimizer_name} optimizer...")
+    print(f"Training with Optimizer {optimizer_name} optimizer...")
 
     for epoch in range(10):
         running_loss = 0.0
